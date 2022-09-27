@@ -107,3 +107,20 @@ No user sessions are running outdated binaries.
 
 No VM guests are running outdated hypervisor (qemu) binaries on this host
 ~~~
+- OpenVPN 구성: vi /etc/openvpn/VPNconfig.conf
+~~~
+dev tun
+tls-client
+remote localhost 1234
+pull
+proto tcp-client
+script-security 2
+comp-lzo
+reneg-sec 0
+cipher SEED-CBC
+auth SHA512
+auth-user-pass /etc/openvpn/auth
+<ca>
+......
+</ca>
+~~~
