@@ -46,3 +46,15 @@ $ sudo scp -P 764 user@IP:/etc/stunnel/stunnel.pem  /etc/stunnel/stunnel.pem
 user@IP's password:
 stunnel.pem                                                                   100% 3001     2.4MB/s   00:00
 ~~~
+- Stunnel 설정: 
+~~~
+output  = /var/log/stunnel4/stunnel.log
+cert    = /etc/stunnel/stunnel.pem
+key     = /etc/stunnel/stunnel.pem
+pid     = /var/run/stunnel4/stunnel.pid
+#client  = yes
+
+[openvpn]
+client = yes
+accept = 1234
+~~~
