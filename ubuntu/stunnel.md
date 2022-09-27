@@ -124,3 +124,8 @@ auth-user-pass /etc/openvpn/auth
 ......
 </ca>
 ~~~
+### Stunnel + OpenVPN 활성화
+- 
+~~~
+sudo systemctl enable stunnel4.service
+~~~
